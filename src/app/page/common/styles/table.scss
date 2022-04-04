@@ -1,0 +1,116 @@
+::-webkit-scrollbar-thumb {
+  background-color: #222e3c   ;
+  border-radius: 100rem;
+}
+.table-section {
+  position: relative;
+  top: 0;
+  left: var(--width-menu);
+  width: calc(100% - var(--width-menu));
+  padding: 4rem 4rem 0;
+  .table-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .table-container {
+    border-radius: 0.6rem;
+    // padding: 2rem;
+    .table-wrapper {
+      // overflow-y: auto;
+      // height: calc(100vh - 20rem);
+      // overflow-x: hidden;
+      // -webkit-overflow-scrolling: auto;
+      // 1632
+      .table {
+        border-radius: 0.6rem 0.6rem 0 0;
+        & > :not(:first-child) {
+          border-top: none !important;
+        }
+
+        tbody {
+          border-top: none;
+          border-style: none;
+          border: 1px solid #e0e0e0;
+        }
+        &.field-row {
+          border: 1px solid #e0e0e0;
+          border-top: none;
+          height: 42px;
+          border-radius: 1.4rem;
+        }
+        .field-column {
+          background: rgb(237, 251, 255);
+          border-bottom: 1px solid #e0e0e0;
+          border-top: none;
+          // position: -webkit-sticky;
+          // position: sticky;
+          // top: 0;
+          // z-index: 2;
+          padding: 1.2rem 2.2rem;
+          color: var(--text-color);
+          white-space: nowrap;
+          font-weight: 500;
+          // &[scope="row"] {
+          //   position: -webkit-sticky;
+          //   position: sticky;
+          //   left: 0;
+          //   z-index: 1;
+          // }
+        }
+        .value-row {
+          max-height: calc(100vh - 40rem);
+          overflow: auto;
+        }
+        .value-column {
+          position: relative;
+          max-width: 50rem;
+          padding: 0.4rem 2.2rem;
+          color: #5a5a5a;
+          font-size: 1.6rem;
+          height: 3.6rem;
+          vertical-align: middle;
+          & p.txt-truncate {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+          }
+          & p.txt-truncate:hover,
+          p.txt-full:hover {
+            color: #0e0e0e;
+            cursor: pointer;
+          }
+          .img-wrapper {
+            width: 4.4rem;
+            height: 4.4rem;
+            .img-fluid {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .options {
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            span {
+              margin: 0 0.4rem;
+            }
+          }
+        }
+      }
+      .value-row {
+        border-bottom: 1px solid #e0e0e0;
+      }
+    }
+  }
+  .table {
+    .field-row {
+      .field-column {
+        font-weight: 500;
+      }
+    }
+  }
+}

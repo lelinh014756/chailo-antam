@@ -1,0 +1,52 @@
+:root {
+    --primary: #d80000c2;
+    --price-text: #d80000c2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.home-below h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--heading-color);
+    text-align: center;
+    margin: 10.8rem 0 2.5rem;
+}
+
+.home-below .pagination {
+    margin-bottom: 8rem;
+}
+
+@media (max-width: 991px) {
+    .home-below {
+        & h2 {
+            font-size: 2rem;
+        }
+        width: 100%;
+        & .row {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+// Tablet: width >= 740px and width < 1024px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .home-below {
+        width: 100%;
+    }
+  }
+
+@media (max-width: 450px) {
+    .home-below {
+        width: 100%;
+    }
+}

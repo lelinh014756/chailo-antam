@@ -6,7 +6,7 @@ import App from "./App";
 import "./styles/_variable.scss";
 import store from "./core/redux/store/configStore";
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <Provider store={store}>
       <App />
     </Provider>

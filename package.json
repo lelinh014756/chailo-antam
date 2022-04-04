@@ -1,4 +1,5 @@
 {
+  "homepage": "http://lelinh014756.github.io/chailo-antam",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,9 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "env-cmd": "^10.1.0",
     "firebase": "^8.10.1",
+    "gh-pages": "^3.2.3",
     "joi-browser": "^13.4.0",
     "lodash": "^4.17.21",
     "node-sass": "^5.0.0",
@@ -28,7 +31,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build:staging": "env-cmd -f .env.staging npm run build"
   },
   "eslintConfig": {
     "extends": [
